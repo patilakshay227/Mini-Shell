@@ -27,4 +27,16 @@ A simple implementation of the Unix Shell in the C Programming language
   - Removes a file or directory
   - Remove    file: ```myrm file1```
   - Remove    directory: ```myrm dir1``` *removes specified directory only if it is empty*
-  - Remove    directory    recursively: ```myrm –r dir1```  *removes specified directory and all its contents*        
+  - Remove    directory    recursively: ```myrm –r dir1```  *removes specified directory and all its contents*
+  
+- **mymv**
+
+- **myls**
+
+- **mycat**
+
+- **mytail**
+
+- **myps**
+
+- **myexit**
