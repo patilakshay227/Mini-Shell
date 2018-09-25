@@ -1,5 +1,5 @@
 # Mini-Shell
-A simple implementation of the Unix Shell in the C Programming language
+An implementation of the Unix Shell in the C Programming language
 
 
 # How to Run
