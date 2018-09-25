@@ -16,4 +16,6 @@ A simple implementation of the Unix Shell in the C Programming language
 
 - **mymkdir**
   - creates a directory 
-  - Single directory: ```mymkdir dir1```    
+  - Single directory: ```mymkdir dir1```
+  - Multiple directories: ```mymkdir dir1    dir2    dir3```
+  - With absolute path: ```mymkdir /home/x/testdir```
