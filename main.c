@@ -157,7 +157,7 @@ int main()
                     // passing 2 arguments to differentiate between mycat without pipe
                     else
                     {
-                        execlp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mycat", "/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mycat", "1", NULL);
+                        execlp("./mycat", "./mycat", "1", NULL);
                     }
                     exit(1);
                 }
@@ -187,11 +187,11 @@ int main()
                         if(tokens >= 2)
                             runCommand("mytail", args);
                         else
-                            execlp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mytail", "/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mytail", args, NULL);
+                            execlp("./mytail", "./mytail", args, NULL);
                     }
                     // default printing last 10 lines
                     else
-                        execlp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mytail", "/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mytail", "-10", NULL);
+                        execlp("./mytail", "./mytail", "-10", NULL);
 
                     exit(1);
                 }
@@ -315,8 +315,8 @@ void callMYPWD(char *args)
 
     if(pid == 0)
     {
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mypwd",NULL};
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mypwd", argv);
+        char *const argv[] = {"./mypwd",NULL};
+        execvp("./mypwd", argv);
     }
     else if(pid > 0)
     {
@@ -344,9 +344,9 @@ void callMYLS(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/myls",args,NULL};
+        char *const argv[] = {"./myls",args,NULL};
 
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/myls", argv);
+        execvp("./myls", argv);
     }
     else if(pid > 0)
     {
@@ -366,9 +366,9 @@ void callMYMKDIR(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mymkdir",args,NULL};
+        char *const argv[] = {"./mymkdir",args,NULL};
 
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mymkdir", argv);
+        execvp("./mymkdir", argv);
     }
     else if(pid > 0)
     {
@@ -391,8 +391,8 @@ void callMYRM(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/myrm",args,NULL};
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/myrm", argv);
+        char *const argv[] = {"./myrm",args,NULL};
+        execvp("./myrm", argv);
     }
     else if(pid > 0)
     {
@@ -414,8 +414,8 @@ void callMYCAT(char *args)
     if(pid == 0)
     {
         // Passing 0 as extra argument for differentiating via no. of arguments in mycat program  
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mycat", "0", args,NULL};
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mycat", argv);
+        char *const argv[] = {"./mycat", "0", args,NULL};
+        execvp("./mycat", argv);
     }
     else if(pid > 0)
     {
@@ -435,9 +435,9 @@ void callMYTAIL(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mytail", "0", args,NULL};
+        char *const argv[] = {"./mytail", "0", args,NULL};
 
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mytail", argv);
+        execvp("./mytail", argv);
     }
     else if(pid > 0)
     {
@@ -460,9 +460,9 @@ void callMYMV(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mymv",args,NULL};
+        char *const argv[] = {"./mymv",args,NULL};
 
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/mymv", argv);
+        execvp("./mymv", argv);
     }
     else if(pid > 0)
     {
@@ -482,8 +482,8 @@ void callMYPS()
 
     if(pid == 0)
     {
-        char *const argv[] = {"/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/myps",NULL};
-        execvp("/home/akshay/IIT KGP/Computing Lab 1/Assignment 7/myps", argv);
+        char *const argv[] = {"./myps",NULL};
+        execvp("./myps", argv);
     }
     else if(pid > 0)
     {
