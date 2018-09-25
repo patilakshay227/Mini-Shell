@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.2
+Name=myShell
+Comment=Test the terminal running a command inside it
+Exec=/home/akshay/IIT\\ KGP/Computing\\ Lab\\ 1/Assignment\\ 7/shell
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=Application;
