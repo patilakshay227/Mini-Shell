@@ -4,9 +4,11 @@ An implementation of the Unix Shell in the C Programming language
 
 # How to Run
 
-**1.** Run ```./makefile```
+**1.** Change MACRO ```ABS_PATH(x)``` in *main.c* to path where you have saved these files. 
 
-**2.** Run ```./shell```
+**2.** Run ```./makefile```
+
+**3.** Run ```./shell```
 
 
 ## Commands Supported
