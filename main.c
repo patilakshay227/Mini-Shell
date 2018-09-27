@@ -16,6 +16,8 @@
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
 
+#define ABS_PATH(x) "/home/akshay/IIT KGP/Mini-Shell/" x
+
 
 void splitCommandAndArguments(char  **input, char **command, char **args);
 void runCommand(char *command, char *args);
@@ -157,7 +159,8 @@ int main()
                     // passing 2 arguments to differentiate between mycat without pipe
                     else
                     {
-                        execlp("./mycat", "./mycat", "1", NULL);
+
+                        execlp(ABS_PATH("mycat"), ABS_PATH("mycat"), "1", NULL);
                     }
                     exit(1);
                 }
@@ -187,11 +190,11 @@ int main()
                         if(tokens >= 2)
                             runCommand("mytail", args);
                         else
-                            execlp("./mytail", "./mytail", args, NULL);
+                            execlp(ABS_PATH("mytail"), ABS_PATH("mytail"), args, NULL);
                     }
                     // default printing last 10 lines
                     else
-                        execlp("./mytail", "./mytail", "-10", NULL);
+                        execlp(ABS_PATH("mytail"), ABS_PATH("mytail"), "-10", NULL);
 
                     exit(1);
                 }
@@ -315,8 +318,8 @@ void callMYPWD(char *args)
 
     if(pid == 0)
     {
-        char *const argv[] = {"./mypwd",NULL};
-        execvp("./mypwd", argv);
+        char *const argv[] = {ABS_PATH("mypwd"),NULL};
+        execvp(ABS_PATH("mypwd"), argv);
     }
     else if(pid > 0)
     {
@@ -344,9 +347,9 @@ void callMYLS(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"./myls",args,NULL};
+        char *const argv[] = {ABS_PATH("myls"),args,NULL};
 
-        execvp("./myls", argv);
+        execvp(ABS_PATH("myls"), argv);
     }
     else if(pid > 0)
     {
@@ -366,9 +369,9 @@ void callMYMKDIR(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"./mymkdir",args,NULL};
+        char *const argv[] = {ABS_PATH("mymkdir"),args,NULL};
 
-        execvp("./mymkdir", argv);
+        execvp(ABS_PATH("mymkdir"), argv);
     }
     else if(pid > 0)
     {
@@ -391,8 +394,8 @@ void callMYRM(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"./myrm",args,NULL};
-        execvp("./myrm", argv);
+        char *const argv[] = {ABS_PATH("myrm"),args,NULL};
+        execvp(ABS_PATH("myrm"), argv);
     }
     else if(pid > 0)
     {
@@ -414,8 +417,8 @@ void callMYCAT(char *args)
     if(pid == 0)
     {
         // Passing 0 as extra argument for differentiating via no. of arguments in mycat program  
-        char *const argv[] = {"./mycat", "0", args,NULL};
-        execvp("./mycat", argv);
+        char *const argv[] = {ABS_PATH("mycat"), "0", args,NULL};
+        execvp(ABS_PATH("mycat"), argv);
     }
     else if(pid > 0)
     {
@@ -435,9 +438,9 @@ void callMYTAIL(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"./mytail", "0", args,NULL};
+        char *const argv[] = {ABS_PATH("mytail"), "0", args,NULL};
 
-        execvp("./mytail", argv);
+        execvp(ABS_PATH("mytail"), argv);
     }
     else if(pid > 0)
     {
@@ -460,9 +463,9 @@ void callMYMV(char *args)
     if(pid == 0)
     {
 
-        char *const argv[] = {"./mymv",args,NULL};
+        char *const argv[] = {ABS_PATH("mymv"),args,NULL};
 
-        execvp("./mymv", argv);
+        execvp(ABS_PATH("mymv"), argv);
     }
     else if(pid > 0)
     {
@@ -482,8 +485,8 @@ void callMYPS()
 
     if(pid == 0)
     {
-        char *const argv[] = {"./myps",NULL};
-        execvp("./myps", argv);
+        char *const argv[] = {ABS_PATH("myps"),NULL};
+        execvp(ABS_PATH("myps"), argv);
     }
     else if(pid > 0)
     {
